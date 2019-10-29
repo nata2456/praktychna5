@@ -2,7 +2,7 @@ def max(a, b):
     return a if a > b else b
 
 
-a = float(input("введіть a="))
+a = float(input("введіть a=")) #ok
 b = float(input("введіть b= "))
 max2 = max(a, b)
 print("max={0}".format(max2))
