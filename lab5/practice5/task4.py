@@ -1,7 +1,6 @@
 # variant1
 #x = float(input("x= "))
 n = 10
-
 x = 1
 
 i = 1
