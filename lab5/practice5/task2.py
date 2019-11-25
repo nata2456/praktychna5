@@ -1,6 +1,6 @@
 # variant1
 # count of digits in the number
-n = float(input("n = "))
+n = int(input("n = "))
 count = 0
 while n:
     n //= 10
