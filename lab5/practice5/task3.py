@@ -7,7 +7,7 @@ suma = 2
 f = 1
 n = 1
 while True:
-    result = ((1/f)*((x-1)/(x+1))**(2*n-1))
+    result = abs((1/f)*((x-1)/(x+1))**(2*n-1))
     if result >= epsilon:
         suma += result
         n += 1
