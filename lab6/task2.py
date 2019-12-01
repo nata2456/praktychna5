@@ -15,7 +15,7 @@ for i in range(n):
     a1 = a2
     a2 = a3
     a3 = an
-    print(an)
+
     A.append(an)
 for el in A:
     if el > z:
