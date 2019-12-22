@@ -58,10 +58,10 @@ class TVector3D(TVector2D):
         return TVector3D(self.x / length, self.y / length, self.z/length)
 
     def __add__(self, vec):
-        return TVector2D(self.x + vec.x, self.y + vec.y, self.z + vec.z),
+        return TVector3D(self.x + vec.x, self.y + vec.y, self.z + vec.z),
 
     def __sub__(self, vec):
-        return TVector2D(self.x - vec.x, self.y - vec.y, self.z - vec.z)
+        return TVector3D(self.x - vec.x, self.y - vec.y, self.z - vec.z)
 
     def __and__(self, vec):
         return self.x * vec.x + self.y * vec.y + self.z*vec.z
