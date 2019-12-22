@@ -16,14 +16,6 @@ class TVector2D:
     def y(self):
         return self.x
 
-    # def set_side(self):
-    #     self.a = int(input('Side a = '))
-    #     self.b = int(input('Side b = '))
-    #     return self.a, self.b
-    #
-    # def get_side(self):
-    #     return self.a, self.b
-
     def square_length(self):
         return (self.x * self.x) + (self.y * self.y)
 
