@@ -1,8 +1,8 @@
 import math
 class TVector2D:
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
     def set_x(self, arg):
         self.x = arg
@@ -15,6 +15,14 @@ class TVector2D:
 
     def y(self):
         return self.x
+
+    # def set_side(self):
+    #     self.a = int(input('Side a = '))
+    #     self.b = int(input('Side b = '))
+    #     return self.a, self.b
+    #
+    # def get_side(self):
+    #     return self.a, self.b
 
     def square_length(self):
         return (self.x * self.x) + (self.y * self.y)
@@ -39,7 +47,7 @@ class TVector2D:
     def __str__(self):
         return "TVector2D: {0}, {1}".format(self.x, self.y)
 
-v = TVector2D(3.8,4.9)
+v = TVector2D(3,4)
 print(v)
 print('Length = ', v.length())
 print('Normalize = ', v.normalize())
