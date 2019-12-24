@@ -40,10 +40,10 @@ class TVector2D:
         return TVector2D(self.x / length, self.y / length)
 
     def __add__(self, vec):
-        return TVector2D(self + vec.x, self + vec.y)
+        return TVector2D(self.x + vec.x, self.y + vec.y)
 
     def __sub__(self, vec):
-        return TVector2D(self - vec.x, self - vec.y)
+        return TVector2D(self.x - vec.x, self.y - vec.y)
 
     def __and__(self, vec):
         return self.x * vec.x + self.y * vec.y
@@ -54,6 +54,9 @@ v = TVector2D(3,4)
 print(v)
 print('Length = ', v.length())
 print('Normalize = ', v.normalize())
+m = TVector2D(7,8)
+res = v+m
+print(res)
 
 
 ```      
