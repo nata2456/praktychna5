@@ -29,10 +29,10 @@ class TVector2D:
         return TVector2D(self.x / length, self.y / length)
 
     def __add__(self, vec):
-        return TVector2D(self + vec.x, self + vec.y)
+        return TVector2D(self.x + vec.x, self.y + vec.y)
 
     def __sub__(self, vec):
-        return TVector2D(self - vec.x, self - vec.y)
+        return TVector2D(self.x - vec.x, self.y - vec.y)
 
     def __and__(self, vec):
         return self.x * vec.x + self.y * vec.y
@@ -45,20 +45,20 @@ class TVector3D(TVector2D):
         super().__init__(x, y)
         self.z = z
 
-    def square_length1(self):
+    def square_length(self):
         return super().square_length() + (self.z*self.z)
 
-    def length1(self):
-        return math.sqrt(self.square_length1())
+    def length(self):
+        return math.sqrt(self.square_length())
 
-    def normalize1(self):
-        length = self.length1()
+    def normalize(self):
+        length = self.length()
         if length == 0.0:
             return TVector3D(0, 0, 0)
         return TVector3D(self.x / length, self.y / length, self.z/length)
 
     def __add__(self, vec):
-        return TVector3D(self.x + vec.x, self.y + vec.y, self.z + vec.z),
+        return TVector3D(self.x + vec.x, self.y + vec.y, self.z + vec.z)
 
     def __sub__(self, vec):
         return TVector3D(self.x - vec.x, self.y - vec.y, self.z - vec.z)
@@ -76,8 +76,11 @@ print('Normalize = ', v1.normalize())
 
 v = TVector3D(3,4,7)
 print(v)
-print('Length = ', v.length1())
-print('Normalize = ', v.normalize1())
-
+print('Length = ', v.length())
+print('Normalize = ', v.normalize())
+v2 = TVector3D(5,7,8)
+print(v2)
+res = v + v2
+print(res)
 
 
